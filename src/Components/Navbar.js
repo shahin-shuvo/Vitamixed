@@ -10,9 +10,8 @@ class Navbar extends React.Component{
     const path  = this.props.path;
     const homeClass = path === "/" ? "nav-link active" : "nav-link";
     const missionClass = path==="/mission" ? "nav-link active" : "nav-link";
-    const contactClass = path==="/contacts" ? "nav-link active" : "nav-link";
-    // const productClass = path===("/products" || "/products#section-mayonnaise" || "/products#section-vinegar" || "/products#section-oil"|| "/products#section-sauces") 
-    // ? "nav-link active" : "nav-link";
+    const contactClass = path.indexOf("/recipes")=== -1 ? "nav-link" : "nav-link active";
+
     const productClass = path.indexOf("/products")=== -1 ? "nav-link" : "nav-link active";
     console.log(path);
     return(
@@ -32,7 +31,7 @@ class Navbar extends React.Component{
                             <ul class="navbar-nav ml-auto scrollspy" style={{margin:"0 auto"}}>
                                 
                                 <li class="nav-item">
-                                    <a href="/mission" class={missionClass}>OUR MISSION</a>
+                                    <a href="/mission" class={missionClass}>MISSION</a>
                                 </li>
                                 <li class="nav-item">
                                     {/* <a  href="/products" class="nav-link">PRODUCTS</a> */}
@@ -51,7 +50,7 @@ class Navbar extends React.Component{
                                 </li>
 
                                 <li class="nav-item">
-                                    <a  href="/contacts" class={contactClass}>CONTACT US</a>
+                                    <a  href="/recipes" class={contactClass}>RECIPES</a>
                                 </li>
                                
                             </ul>

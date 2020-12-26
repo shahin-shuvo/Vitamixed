@@ -11,6 +11,12 @@ class ProductPage extends React.Component {
     render(){
         return(
             <div style={{marginTop:"50px"}}>
+                <div className="" style={{position:"relative"}}>
+                <img style={{ width: "100%", height: "80vh"}} src= "/static/images/prod_home.jpg"/>
+                <div class="centered-text" style={{color:"wheat"}}>
+                "Pleasure – that is what is sought in every bite."
+                </div>
+            </div>
             <div style={{ position:"relative"}}>
                 <Breadcrumb >
                   <Breadcrumb.Item href="/" style={{fontWeight:"100", fontSize:"12px"}}>HOME</Breadcrumb.Item>
